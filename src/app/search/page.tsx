@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 import {
   Container,
@@ -13,10 +14,11 @@ import {
 import { searchCards } from "@/services/scryfallService";
 import { useCardStore } from "@/store/useCardStore";
 import { fromScryfall } from "@/utils/fromScryfall";
+import type { ScryfallCard } from "@/types/scryfall";
 
 export default function SearchPage() {
   const [query, setQuery] = useState("");
-  const [results, setResults] = useState<any[]>([]);
+  const [results, setResults] = useState<ScryfallCard[]>([]);
   const { addCard } = useCardStore();
 
   const handleSearch = async () => {

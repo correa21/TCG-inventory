@@ -1,13 +1,9 @@
 "use client";
-import {
-  Container,
-  Grid,
-  Typography,
-  Card as MUICard,
-  CardMedia,
-  CardContent,
-  Button,
-} from "@mui/material";
+
+import { Container, Typography, Card as MUICard, Button } from "@mui/material";
+import Grid from "@mui/material/Grid";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
 import { useCardStore } from "@/store/useCardStore";
 import { Card as TCGCard } from "@/types/card";
 
@@ -21,7 +17,7 @@ export default function HomePage() {
       </Typography>
       <Grid container spacing={2}>
         {cards.map((card: TCGCard) => (
-          <Grid item xs={12} sm={6} md={4} key={card.id}>
+          <Grid xs={12} sm={6} md={4} key={card.id}>
             <MUICard>
               <CardMedia
                 component="img"

@@ -1,6 +1,7 @@
 import { Card } from "@/types/card";
+import { ScryfallCard } from "@/types/scryfall";
 
-export const fromScryfall = (card: any): Card => ({
+export const fromScryfall = (card: ScryfallCard): Card => ({
   id: card.id,
   name: card.name,
   imageUrl: card.image_uris?.normal ?? "",
