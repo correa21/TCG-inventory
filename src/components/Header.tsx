@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AppBar, Toolbar, Typography, Button, Box } from "@mui/material";
 import { navLinks } from "@/constants/navLinks";
+import ThemeToggleButton from "./ThemeToggleButton";
 
 export default function Header() {
   const pathname = usePathname();
@@ -32,6 +33,7 @@ export default function Header() {
             );
           })}
         </Box>
+        <ThemeToggleButton />
       </Toolbar>
     </AppBar>
   );
